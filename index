@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全球双向短信 & 美国 P2P SMS API</title>
+    <style>
+        :root {
+            --primary-color: #0366d6;
+            --bg-color: #f6f8fa;
+            --text-color: #24292e;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: var(--bg-color);
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 1px solid #eaecef;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        .subtitle {
+            font-size: 1.2em;
+            color: #586069;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #2ea44f;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 6px;
+            font-size: 1.1em;
+            transition: background-color 0.2s;
+        }
+        .cta-button:hover {
+            background-color: #2c974b;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .feature-card {
+            border: 1px solid #eaecef;
+            border-radius: 6px;
+            padding: 24px;
+            background: #fff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+        }
+        .feature-card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+        .code-block {
+            background-color: #1b1f23;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+            font-size: 0.9em;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #586069;
+            border-top: 1px solid #eaecef;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>全球双向短信 & 美国 P2P SMS</h1>
+        <p class="subtitle">稳定、高到达率的通信 API。轻松集成真实的美国本地号码与全球 200+ 国家短信网络。</p>
+        <a href="https://github.com/okxcn/USP2P" class="cta-button">获取 API Key / 查看文档</a>
+    </header>
+
+    <div class="container">
+        <div class="feature-card">
+            <h3>🌍 全球双向覆盖</h3>
+            <p>支持向全球主流国家和地区发送验证码、通知及营销短信，同时支持上行回复，实现双向互动。</p>
+        </div>
+        <div class="feature-card">
+            <h3>🇺🇸 纯正美国 P2P</h3>
+            <p>提供真实的美国本地实体/虚拟号码。支持高频 P2P（人对人）短信交互，兼容 10DLC 商业合规要求。</p>
+        </div>
+        <div class="feature-card">
+            <h3>⚡ 极简 API 接入</h3>
+            <p>RESTful 标准接口，毫秒级响应。支持 Python, Java, Node.js, PHP 等全语言无缝对接。</p>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 50px;">
+        <h2>开发者友好，只需几行代码</h2>
+        <p>支持快速集成至你的 Web3 项目、出海电商或社交应用中。</p>
+    </div>
+
+    <div class="code-block">
+# 发送一条美国 P2P 短信示例 (cURL)
+curl -X POST https://api.yourdomain.com/v1/sms/send \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "to": "+1234567890",
+    "from": "+1098765432",
+    "text": "Hello, welcome to our global communication network!"
+  }'
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Global SMS API Solutions. Open sourced under MIT License.</p>
+        <p>Visit our <a href="https://github.com/okxcn/USP2P">GitHub Repository</a> for full documentation.</p>
+    </footer>
+
+</body>
+</html>
